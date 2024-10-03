@@ -1,0 +1,70 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Technical project analysis",
+    description:
+      "Finding and eliminating errors, slowing down the project.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "Internal SEO-optimization of the project",
+    description:
+      "Optimization of the most important areas of documents.Adjustment of meta tags and keywords",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "External SEO-optimization of the project",
+    description:
+      "Building an effective and natural link profile of the site.Social networks.Content marketing.Registration in reference services and catalogs.Sites with reviews.",
+    icon: "bx:bxs-user",
+  },
+  {
+    title: "Collect semantics from multiple sources of data retrieval.",
+    description:
+      "Unique methodology for collecting semantics from multiple sources.Semantic core clustering.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Working on external ranking factors",
+    description:
+      "Work on external ranking factors.Work on reputation.Improving the behavioral factors of the site.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "Monitoring and analytics.",
+    description:
+      "Daily collection of positions.Identification of search queries that lead to conversions into leads (calls and requests).",
+    icon: "bx:bxs-file-find",
+  },
+  
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Everything you need to rise to the top of the search engines (Google,Safari)
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Astro comes batteries included. It takes the best parts of state-of-the-art
+    tools and adds its own innovations.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

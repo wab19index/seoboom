@@ -1,0 +1,30 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/graph-6_en.svg";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<main class="grid lg:grid-cols-2 place-items-center  pl-5 pr-3 mt-10 mb-10 ">
+  <div class="md:order-1 md:block hover:rotate-1 border rounded-xl shadow-xl">
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 800px) 100vw, 720px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div class="xl:pr-20 ">
+    <h1
+      class="text-2xl lg:text-2xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter pt-5">
+      Link Building
+    </h1>
+    <p class="text-xl mt-3 font-bold">Get more bang for your buck with link building:</p>
+    <ul class="text-lg mt-2 text-slate-600 max-w-xl list-disc pl-6">
+    <li>Analyze backlink gaps to see who is linking to other sites in your niche but not to you.</li>
+    <li>Analyze competitors' backlink data.</li>
+    </ul>
+   </div>
+</main>
